@@ -1,0 +1,15 @@
+package ufba.factorymethod;
+
+class CriaCabecalho extends CriadorDocumentacao{
+
+    public CriadorDocumentacao CriaCabecalho(TipoDocumento TipoDocumento){
+
+        if (tipoDocumento == TipoDocumento.HTML) {
+            rodape = new RodapeHTML();
+        } else {
+            rodape = new RodapeMarkdown();
+        }
+
+        rodape.setData(new Date());
+        return rodape.getOutput();
+    }

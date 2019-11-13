@@ -1,4 +1,4 @@
-package ufba.abstractfactory;
+package ufba.factorymethod;
 
 public class Main {
 

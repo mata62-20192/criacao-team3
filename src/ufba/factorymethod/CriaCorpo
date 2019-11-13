@@ -1,0 +1,13 @@
+package ufba.factorymethod;
+
+class CriaCabecalho extends CriadorDocumentacao{
+
+    public CriadorDocumentacao CriaCabecalho(TipoDocumento TipoDocumento){
+
+        if (tipoDocumento == TipoDocumento.HTML) {
+            corpo = new CorpoHTML();
+        } else {
+            corpo = new CorpoMarkdown();
+        }
+        return corpo.getOutput();
+    }

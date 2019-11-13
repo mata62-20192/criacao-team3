@@ -1,4 +1,4 @@
-package ufba.abstractfactory;
+package ufba.factorymethod;
 
 import java.util.Date;
 
@@ -18,7 +18,11 @@ public abstract class CriadorDocumentacao {
 	public CriadorDocumentacao(TipoDocumento tipoDocumento) {
 		this.tipoDocumento = tipoDocumento;
 	}
+
 	 geraDocumentacao = criarModelo(); //factorymetodo
+
+
+    //Factory Method
 	public abstract CriadorDocumentacao geraDocumentacao();
 		Cabecalho cabecalho;
 		Corpo corpo;
@@ -42,10 +46,10 @@ public abstract class CriadorDocumentacao {
 		corpo.setTexto("Aula de padroes de projeto na disciplina Engenharia de Software I.");
 
 		if (tipoDocumento == TipoDocumento.HTML) {
-			rodape = new RodapeHTML();
-		} else {
-			rodape = new RodapeMarkdown();
-		}
+		rodape = new RodapeHTML();
+	} else {
+		rodape = new RodapeMarkdown();
+	}
 
 		rodape.setData(new Date());
 
