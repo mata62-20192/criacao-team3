@@ -1,4 +1,4 @@
-package ufba.factorymethod;
+package ufba.abstractfactory;
 
 import java.util.Date;
 import ufba.elementos.Cabecalho;
@@ -10,7 +10,8 @@ public class Main {
     }
 
     public static void main(String[] Args) {
-        criadorDocumentacao criador = new criadorDocumentacaoHTML();
+        fabricaDocumentacao fabrica = new fabricaDocumentacaoHTML();
+        criadorDocumentacao criador = new criadorDocumentacao(fabrica);
         Cabecalho cabecalho = criador.geraCabecalho();
         Corpo corpo = criador.geraCorpo();
         Rodape rodape = criador.geraRodape();
