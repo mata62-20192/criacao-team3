@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="ufba.factorymethod.criadorDocumentacao" />
+			<role name="FactoryMethod()" element="ufba.factorymethod.criadorDocumentacao::geraCabecalho():ufba.elementos.Cabecalho" />
+			<role name="FactoryMethod()" element="ufba.factorymethod.criadorDocumentacao::geraCorpo():ufba.elementos.Corpo" />
+			<role name="FactoryMethod()" element="ufba.factorymethod.criadorDocumentacao::geraRodape():ufba.elementos.Rodape" />
+		</instance>
+		<instance>
+			<role name="Creator" element="ufba.abstractfactory.fabricaDocumentacao" />
+			<role name="FactoryMethod()" element="ufba.abstractfactory.fabricaDocumentacao::criaCabecalho():ufba.elementos.Cabecalho" />
+			<role name="FactoryMethod()" element="ufba.abstractfactory.fabricaDocumentacao::criaCorpo():ufba.elementos.Corpo" />
+			<role name="FactoryMethod()" element="ufba.abstractfactory.fabricaDocumentacao::criaRodape():ufba.elementos.Rodape" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton" />
+	<pattern name="(Object)Adapter" />
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator" />
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="ufba.abstractfactory.criadorDocumentacao" />
+			<role name="State" element="ufba.abstractfactory.fabricaDocumentacao" />
+			<role name="state" element="ufba.abstractfactory.criadorDocumentacao::fabrica:ufba.abstractfactory.fabricaDocumentacao" />
+			<role name="Request()" element="ufba.abstractfactory.criadorDocumentacao::geraCabecalho():ufba.elementos.Cabecalho" />
+			<role name="Request()" element="ufba.abstractfactory.criadorDocumentacao::geraCorpo():ufba.elementos.Corpo" />
+			<role name="Request()" element="ufba.abstractfactory.criadorDocumentacao::geraRodape():ufba.elementos.Rodape" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge" />
+	<pattern name="Template Method" />
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+
